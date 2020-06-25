@@ -1,162 +1,110 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <!--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">-->
     <link rel="stylesheet" href="css/shopify.css">
     <link rel="stylesheet" href="css/style.css">
-
     <style>
-        .bg-blue {
-            /*background: #414d53 !important;*/
-        }
-
-        /*Global Styles*/
-
-        /*Flexbox*/
-        .flex-item-center {
+        .gallery {
             display: flex;
-            flex-direction: column;
-            flex-wrap: nowrap;
-            justify-content: center;
-            align-items: center;
-            align-content: space-between
+            justify-content: space-between;
         }
 
-        /*!Flexbox*/
+        .col-left {
+            width: 76%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            /*background: blue;*/
+        }
+
+        .col-right {
+            background: red;
+            width: 35.4%;
+        }
 
 
-        /*Hero section*/
-        .hero {
-            background-image: url("images/LL_header@2x.jpg");
-            background-position: center center;
+        .l-thumbnails {
+            max-width: 313px;
+            height: 250px;
+            position: relative;
+            text-align: center;
+        }
+
+        .l-thumbnails::after {
+            content: '';
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, .01);
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .l-thumbnails .content {
+            width: 280px;
+            height: 80px;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-140px);
+            margin-top: -20px;
+            position: absolute;
+            color: #fff;
+            z-index: 8888;
+        }
+
+        .l-thumbnails .content h2 {
+            font-size: 1.3rem;
+            letter-spacing: 0.1em !important;
+        }
+
+        .l-thumbnails .content p {
+            font-size: .9rem;
+            letter-spacing: .01em !important;
+        }
+
+
+        .l-thumbnails img {
+            width: 100%;
+            height: auto;
+        }
+
+        .r-thumbnail {
+            max-width: 326px;
+            height: 534px;
+            overflow: hidden;
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("images/LL-referral@2x.jpg");
+            background-position: top center;
+            background-origin: border-box;
+            background-size: cover;
             background-repeat: no-repeat;
-            background-size: contain;
-            min-height: 400px;
-            margin-top: 220px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
 
-        .hero .second-half {
-            max-width: 552px;
+        .r-thumbnail img {
+            width: 110%;
+        }
+
+        .tracker-links {
+            width: 55%;
+            padding-top: 35px;
+            padding-bottom: 76px;
             margin: 0 auto;
         }
 
-        .welcome-box h1 {
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            font-family: "Bell MT", serif;
-            font-size: 1.7rem;
+        .tracker-links a {
+            text-decoration: underline;
+            color: #000;
         }
 
-        .hero .second-half p {
-            font-size: 1.1rem;
-        }
-
-        /*!Hero section*/
-
-        /*Points Section*/
-        .points-content {
-            max-width: 655px;
-        }
-
-        .bg-cream {
-            background-color: #FCFAF7 !important;
-        }
-
-        .prices-cards .prices-card {
-            width: 314px;
-            height: 250px;
-            background-color: #fff;
-            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.07);
-        }
-
-        .prices-card .price {
-            font-family: "Novel Sans Rd Pro", serif;
-            font-weight: 300;
-            font-size: 3rem;
-        }
-
-        .prices-card p {
-            font-family: "Novel Sans Rd Pro", serif;
-            font-weight: 300;
-            font-size: .9rem;
-        }
-
-        /*!Points Section*/
-
-        /* PP Love section */
-
-        .pp-cards .pp-card {
-            width: 314px;
-            height: 171px;
-            background: #FFFFFF;
-            border: 1px solid #E2E2E2;
-            box-sizing: border-box;
-            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.07);
-            position: relative;
-        }
-
-        .diamond-image {
-            background-image: url("images/LL_diamond@2x.png");
-            background-position: left;
-            background-size: contain;
-            background-repeat: repeat-x;
-            width: 33px;
-            height: 35px;
-            margin-top: 15px;
-        }
-
-        .diamond-image-2times {
-            width: 68px;
-        }
-
-        .diamond-image-3times {
-            width: 101px;
-        }
-
-        .pp-cards h2 {
-            font-size: 1.2rem;
-            padding-top: 18px;
-
-        }
-
-        .pp-cards p {
-            font-family: "Bell MT", serif;
-            font-size: .7rem;
-            margin-top: 5px;
-        }
-
-        .you-are-hear {
-            position: absolute;
-            bottom: -70px;
-        }
-
-        .you-are-hear .line {
-            border: 1px solid #000;
-            width: 54px;
-            transform: rotate(90deg);
-            position: absolute;
-            left: 55px;
-            top: -35px;
-        }
-
-        .you-are-hear h3 {
-            position: relative;
-            font-size: 1rem;
-        }
-
-        /*! PP Love Section */
-
+        /** !Earn Pure Points **/
     </style>
 </head>
-<body class="bg-blue">
+<body>
 <div class="c-container">
     <div class="hero">
         <div class="content">
@@ -171,11 +119,70 @@
         </div>
     </div>
 </div>
+
+<section class="grid-section">
+    <div class="c-container">
+        <h2 class="subheading text-center pt-1 pb-2">EARN PURE POINTS</h2>
+        <div class="gallery ">
+            <div class="col-left w-75">
+                <a href="#" class="img-link">
+                    <div class="l-thumbnails">
+                        <img src="images/LL_purchase@2x.jpg" alt="">
+                        <div class="content">
+                            <h2>MAKE A PURCHASE</h2>
+                            <p class="mt-0">2 PURE POINTS FOR EVERY $1</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="img-link">
+                    <div class="l-thumbnails ml-2 ">
+                        <img src="images/LL_instagram@2x.jpg" alt="">
+                        <div class="content">
+                            <h2>FOLLOW US<br> ON INSTAGRAM</h2>
+                            <p class="mt-0">50 PURE POINTS</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="img-link">
+                    <div class="l-thumbnails mt-2">
+                        <img src="images/LL_subscription@2x.jpg" alt="">
+                        <div class="content">
+                            <h2>ADD A DEODORANT
+                                SUBSCRIPTION</h2>
+                            <p class="mt-0">300 PURE POINTS</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="img-link">
+                    <div class="l-thumbnails ml-2 mt-2">
+                        <img src="images/LL_email@2x.jpg" alt="">
+                        <div class="content">
+                            <h2>SIGNUP FOR EMAIL UPDATES</h2>
+                            <p class="mt-0">200 POINTS</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-right w-24">
+                <div class="r-thumbnail">
+                    <img src="images/LL-referral@2x.jpg">
+                </div>
+            </div>
+        </div>
+        <div class="tracker-links">
+            <a href="#" class="float-left">VIEW MORE WAYS TO EARN POINTS</a>
+            <a href="#" id="btn-view-tracker" class="float-right">VIEW MY POINTS TRACKER</a>
+            </divcl>
+        </div>
+</section>
+
+
 <section class="section points-section bg-cream">
     <div class="c-container bg-cream">
         <div class="points-content mx-auto">
             <h2 class="subheading text-center">SPEND PURE POINTS</h2>
-            <p class="text-center px-1">Earn Pure Points when you purchase your favorite products and for sharing our
+            <p class="text-center px-1">Earn Pure Points when you purchase your favorite products and for sharing
+                our
                 mission. For every 1,000
                 points we'll give you a $10 discount code to spend on any of our products. Thanks for being a fan of
                 Primally Pure!</p>
@@ -189,12 +196,12 @@
             <div class="prices-card flex-item-center">
                 <span class="price pb-1">$10</span>
                 <p class="pb-1">1000 PURE POINTS</p>
-                <a href="#" class="btn btn-secondary">REDEEM NOW</a>
+                <a href="#" class="btn btn-secondary">KEEP ON EARNING!</a>
             </div>
             <div class="prices-card flex-item-center">
                 <span class="price pb-1">$20</span>
                 <p class="pb-1">2000 PURE POINTS</p>
-                <a href="#" class="btn btn-secondary">REDEEM NOW</a>
+                <a href="#" class="btn btn-secondary">KEEP ON EARNING!</a>
             </div>
         </div>
     </div>
@@ -203,10 +210,10 @@
 <section class="section pp-love-section mb-5">
     <div class="c-container">
         <div class="points-content mx-auto">
-            <h2 class="subheading text-center">MORE PP LOVE = MORE PP REWARDS</h2>
+            <h2 class="subheading text-center pp">MORE PP LOVE = MORE PP REWARDS</h2>
         </div>
         <div class="pp-cards d-flex mt-2 justify-content-between">
-            <div class="pp-card flex-item-center">
+            <div class="pp-card flex-item-center pp-fan">
                 <span class="diamond-image"></span>
                 <h2>PP FAN</h2>
                 <p class="text-center">2 PURE POINTS FOR EVERY $1</p>
@@ -224,10 +231,134 @@
                 <span class="diamond-image diamond-image-3times"></span>
                 <h2>PP FAN</h2>
                 <p class="text-center">4 PURE POINTS FOR EVERY $1 <br> SPEND $1,000</p>
-
             </div>
         </div>
     </div>
 </section>
+
+<sidebar class="slider" id="slider">
+    <a href="#" id="btn-close-slider" class="btn-close"><img src="images/LL_close@2x.png" alt=""></a>
+    <div class="slider-card">
+        <div class="slider-points-card">
+            <div class="promo mx-auto">
+                <p>500</p>
+            </div>
+            <h3 class="text-center">MY POINTS TRACKER</h3>
+            <ul>
+                <li><span class="point-worth">300</span><span>Add a deodorant subscription</span></li>
+                <li class="checked"><span class="point-worth">200</span><span>Refer a friend</span></li>
+                <li><span class="point-worth">100</span><span>Take our skincare regimen quiz</span></li>
+                <li class="checked"><span class="point-worth">100</span><span>Sign up for email updates</span></li>
+                <li><span class="point-worth">100</span><span>Leave a review</span></li>
+                <li><span class="point-worth">50 </span><span>Follow us on Instagram</span></li>
+                <li><span class="point-worth">50 </span><span>Happy birthday</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="slider-card">
+        <div class="slider-reward-card text-center">
+            <h3 class="text-center">MY PURE REWARDS</h3>
+            <div class="prices-card flex-item-center ">
+                <span class="price pb-1">$5</span>
+                <p class="pb-1">500 PURE POINTS</p>
+                <a href="#" class="btn btn-primary">REDEEM NOW</a>
+            </div>
+            <h4 class="pt-2">Next Reward:</h4>
+            <p class="mt-0">You’re only 500 Pure Points away  <br>from a $10 reward!</p>
+        </div>
+    </div>
+    <div class="slider-card">
+        <div class="slider-reward-card pb-2 text-center">
+            <h3 class="text-center">MY REWARDS TIER</h3>
+            <div class="pp-card flex-item-center">
+                <span class="diamond-image mb-1"></span>
+                <h2>PP FAN</h2>
+                <p class="text-center mt-0 pp-desc">2 PURE POINTS FOR EVERY
+                    $1</p>
+            </div>
+            <h4 class="pt-2">Level Up:</h4>
+            <p class="mt-0">You’re getting close to becoming a PP Lover! When you spend $500, you’ll receive 3
+                Pure Points for every <br>$1 you spend.</p>
+        </div>
+    </div>
+    <div class="slider-card">
+        <div class="slider-pure-point-card pb-2">
+            <h3 class="text-center">MY PURE POINTS HISTORY</h3>
+            <ul class="pt-1">
+                <li>
+                 <span class="date-desc-container">
+                    <span class="date">05/26/2020</span>
+                    <span style="display: block">Like us on Facebook</span>
+                </span>
+                    <span class="pure-points mt-1">25</span>
+                </li>
+                <li>
+                 <span class="date-desc-container">
+                    <span class="date">06/24/2020</span>
+                    <span style="display: block">Purchase of $425.00</span>
+                </span>
+                    <span class="pure-points mt-1">425</span>
+                </li>
+                <li>
+                 <span class="date-desc-container">
+                    <span class="date">06/23/2020</span>
+                    <span style="display: block">Create an account</span>
+                </span>
+                    <span class="pure-points mt-1">50</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</sidebar>
+
+<div class="d-modal" id="modal-box">
+    <div class="d-modal-content">
+        <a href="#" id="btn-close-modal"><img class="btn-close" src="images/LL_close@2x.png" alt=""></a>
+        <p class="text-center pb-1">Give a friend 5% off their first purchase and earn 200 Pure Points if they spend
+            over $25.
+        </p>
+        <p class="text-center pb-1">Just copy your link and share anywhere:</p>
+        <div class="input-group">
+            <input type="text" value="https://prz.io/5ej1O0CO">
+            <a href="#" class="btn-copy"><img src="images/copy-icon.png" alt=""></a>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+<script>
+
+    $('#btn-view-tracker').on('click', function (evt) {
+        evt.preventDefault();
+
+        $('#slider').addClass('show');
+        $('body').addClass('backdrop');
+
+    });
+
+    $('#btn-close-slider').on('click', function (evt) {
+        evt.preventDefault();
+
+        $('#slider').removeClass('show');
+        $('body').removeClass('backdrop');
+    });
+
+    $('.img-link').on('click', function (e) {
+        e.preventDefault();
+
+        $('#modal-box').toggleClass('show');
+        $('body').addClass('backdrop');
+    });
+
+    $('#btn-close-modal').on('click', function (evt) {
+        evt.preventDefault();
+
+        $('#modal-box').removeClass('show');
+        $('body').removeClass('backdrop');
+    });
+
+</script>
 </body>
+
 </html>

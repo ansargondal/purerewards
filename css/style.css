@@ -1,11 +1,30 @@
 
-body {
-
-}
-
 .c-container {
     max-width: 1016px;
     margin: 0 auto;
+}
+
+html {
+    min-height: 100% !important;
+    position: relative;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+body.backdrop:after {
+    content: '';
+    width: 100%;
+    min-height: 100% !important;
+    background: rgba(0, 0, 0, .25);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+a:hover {
+    color: rgba(255, 255, 255, .7);
 }
 
 .btn {
@@ -63,6 +82,10 @@ body {
 
 .w-50 {
     width: 50%;
+}
+
+.mt-0 {
+    margin-top: 0 !important;
 }
 
 .mt-1 {
@@ -288,3 +311,661 @@ h2.subheading {
 
 
 /*!Global Styles*/
+
+
+/*Flexbox*/
+.flex-item-center {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: space-between
+}
+
+/*!Flexbox*/
+
+
+/*Hero section*/
+.hero {
+    background-image: url("../images/LL_header@2x.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 400px;
+    margin-top: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero .second-half {
+    max-width: 552px;
+    margin: 0 auto;
+}
+
+.welcome-box h1 {
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-family: "Bell MT", serif;
+    font-size: 1.7rem;
+}
+
+.hero .second-half p {
+    font-size: 1.1rem;
+}
+
+/*!Hero section*/
+
+/*Points Section*/
+.points-content {
+    max-width: 655px;
+}
+
+.bg-cream {
+    background-color: #FCFAF7 !important;
+}
+
+.prices-cards .prices-card {
+    width: 314px;
+    height: 250px;
+    background-color: #fff;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.07);
+}
+
+.prices-card .price {
+    font-family: "Novel Sans Rd Pro", serif;
+    font-weight: 300;
+    font-size: 3rem;
+}
+
+.prices-card p {
+    font-family: "Novel Sans Rd Pro", serif;
+    font-weight: 300;
+    font-size: .9rem;
+}
+
+/*!Points Section*/
+
+/* PP Love section */
+
+.pp-card {
+    width: 314px;
+    height: 171px;
+    background: #FFFFFF;
+    border: 1px solid #E2E2E2;
+    box-sizing: border-box;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.07);
+    position: relative;
+}
+
+.diamond-image {
+    background-image: url("../images/LL_diamond@2x.png");
+    background-position: left;
+    background-size: contain;
+    background-repeat: repeat-x;
+    width: 33px;
+    height: 35px;
+    margin-top: 15px;
+}
+
+.diamond-image-2times {
+    width: 68px;
+}
+
+.diamond-image-3times {
+    width: 101px;
+}
+
+.pp-cards h2 {
+    font-size: 1.2rem;
+    padding-top: 18px;
+
+}
+
+.pp-cards p {
+    font-family: "Bell MT", serif;
+    font-size: .7rem;
+    margin-top: 5px;
+}
+
+.you-are-hear {
+    position: absolute;
+    bottom: -70px;
+}
+
+.you-are-hear .line {
+    border: 1px solid #000;
+    width: 54px;
+    transform: rotate(90deg);
+    position: absolute;
+    left: 55px;
+    top: -35px;
+}
+
+.you-are-hear h3 {
+    position: relative;
+    font-size: 1rem;
+}
+
+/*! PP Love Section */
+
+
+body.slider-page {
+    background: #414d53;
+}
+
+/** Slider Points Tracker **/
+.slider.show {
+    right: 0;
+}
+
+.slider {
+    right: -600px;
+    width: 401px;
+    min-height: 100% !important;
+    position: absolute;
+    top: 0;
+    z-index: 999999;
+    background: #ffffff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.07);
+    transition: right;
+    transition-duration: 800ms;
+    transform-style: flat;
+}
+
+
+@media (max-width: 640px) {
+
+    .slider {
+        width: 313px !important;
+    }
+}
+
+.slider .btn-close {
+    width: 25px;
+    height: 29px;
+    position: absolute;
+    z-index: 88888;
+    top: 0;
+    right: 30px;
+}
+
+.slider-card {
+    border-bottom: 1px solid #E2E2E2;
+    padding: 10px 0;
+}
+
+.slider-card h3 {
+    font-size: .97rem;
+    letter-spacing: .1em !important;
+    padding: 12px;
+}
+
+.slider-points-card {
+    max-width: 280px;
+    min-width: 200px;
+    margin: 0 auto;
+}
+
+.slider-points-card .promo {
+    width: 101px;
+    height: 101px;
+    background: #E7E4E0;
+    border-radius: 50%;
+    position: relative;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+
+.slider-points-card .promo p {
+    font-family: "Novel Sans Rd Pro", serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.slider-points-card li {
+    font-size: .8rem;
+    line-height: 2.4;
+}
+
+.slider .point-worth {
+    display: inline-block;
+    width: 55px;
+}
+
+.checked {
+    text-decoration: line-through;
+}
+
+
+/**!Slider Points Tracker **/
+
+/** Slider Pure Rewards **/
+
+.slider-reward-card {
+    max-width: 300px;
+    min-width: 200px;
+    margin: 0 auto;
+}
+
+.slider-reward-card p {
+    font-size: .9rem;
+    font-family: "Novel Sans Rd Pro", serif;
+    letter-spacing: .06em !important;
+    line-height: 1.2rem;
+}
+
+.slider-reward-card .prices-card {
+    width: 314px;
+    height: 250px;
+    background-color: #FCFAF7;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.07);
+    margin: 0 auto;
+}
+
+.pp-desc {
+    font-size: .8rem !important;
+    letter-spacing: .03rem;
+    padding-top: 5px;
+}
+
+.slider-reward-card .price {
+    font-family: "Novel Sans Rd Pro", serif;
+    font-weight: 300;
+    font-size: 3rem;
+}
+
+.slider-reward-card p {
+    font-family: "Novel Sans Rd Pro", serif;
+    font-weight: 300;
+    font-size: .9rem;
+}
+
+/** !Slider Pure Rewards **/
+
+/** Slider My Reward Tier **/
+.pp-card {
+    background: #FCFAF7;
+}
+
+
+/** !Slider My Reward Tier **/
+
+
+/** Slider Pure Points History**/
+.slider-pure-point-card {
+    max-width: 300px;
+    min-width: 200px;
+    margin: 0 auto;
+    font-size: .9rem;
+    padding: 0 10px;
+}
+
+.slider-pure-point-card li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    letter-spacing: .06em !important;
+}
+
+/** !Slider Pure Points History**/
+
+.d-modal.show {
+    display: flex;
+}
+
+.d-modal {
+    width: 540px;
+    height: 292px;
+    background: #FFFFFF;
+    padding: 15px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.07);
+    position: fixed;
+    z-index: 99999; /* Sit on top */
+    margin-left: -270px;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-270px);
+}
+
+.btn-close {
+    width: 25px;
+    height: 30px;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+
+.d-modal-content {
+    max-width: 387px;
+}
+
+.d-modal-p {
+    width: 100%;
+    font-family: Novel Sans Rd Pro, serif;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    color: #000000;
+}
+
+.d-modal-link {
+    background: #EEEEEE;
+    padding: 5px 0;
+}
+
+
+.input-group input {
+    border-right-style: none;
+    border-left-style: none;
+    border-bottom-style: none;
+    background-color: #eee;
+    width: 377px;
+    height: 44px;
+    line-height: 25px;
+    padding: 0;
+    font-family: "Novel Sans Rd Pro", serif;
+    font-style: normal;
+    font-weight: 300;
+    text-align: center;
+    letter-spacing: 0.1em;
+    color: #000000;
+}
+
+.input-group input:focus {
+    outline: none !important;
+}
+
+.input-group {
+    position: relative;
+}
+
+.btn-copy {
+    position: absolute;
+    top: 12px;
+    right: 24px;
+    width: 20px;
+    height: 20px;
+}
+
+@media (max-width: 560px) {
+    .d-modal {
+        max-width: 540px;
+        height: auto;
+        background: #FFFFFF;
+        padding: 15px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+/***** Responsive CSS ********/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+    .c-container {
+        margin: 0 auto;
+        padding: 0 15px;
+        min-width: 690px;
+        max-width: 1030px;
+        width: 90%;
+    }
+
+    .prices-card.flex-item-center {
+
+        width: 31% !important;
+    }
+
+    .prices-card.flex-item-center a {
+        width: 80% !important;
+    }
+
+
+    .pp-card.flex-item-center {
+        width: 31% !important;
+    }
+
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .c-container {
+        margin: 0 auto;
+        padding: 0 15px;
+        min-width: 690px;
+        max-width: 1030px;
+        width: 84%;
+    }
+
+    .prices-card.flex-item-center {
+
+        width: 30%;
+    }
+
+    .prices-card.flex-item-center a {
+        width: 80%;
+    }
+
+
+    .pp-card.flex-item-center {
+        width: 31%;
+    }
+
+
+}
+
+@media screen and (max-width: 767px) {
+
+    .prices-card.flex-item-center {
+        max-width: 430px;
+        margin: auto;
+    }
+
+
+    .prices-cards.pb-3.d-flex.mt-4.justify-content-between {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .prices-card.flex-item-center {
+        margin: 15px auto;
+        width: 100% !important;
+    }
+
+    .pp-cards.d-flex.mt-2.justify-content-between {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 430px;
+        margin: auto;
+    }
+
+
+    .pp-card.flex-item-center.pp-fan {
+        margin-bottom: 70px;
+    }
+
+    .pp-card.flex-item-center {
+        margin: 15px auto;
+        width: 100% !important;
+    }
+
+
+}
+
+
+@media (max-width: 719px) {
+    .c-container {
+        margin: 0 auto;
+        padding: 0 25px;
+    }
+
+    .prices-cards.pb-3.d-flex.mt-4.justify-content-between {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .prices-card.flex-item-center {
+        margin: 15px auto;
+
+        min-width: 290px;
+        width: 100% !important;
+    }
+
+
+    .pp-cards.d-flex.mt-2.justify-content-between {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+
+    .pp-card.flex-item-center.pp-fan {
+        margin-bottom: 70px;
+    }
+
+    .pp-card.flex-item-center {
+        margin: 15px auto;
+        width: 100% !important;
+    }
+
+
+}
+
+
+@media (max-width: 480px) {
+
+    /* body {
+        overflow-x: hidden;
+    } */
+    .c-container {
+        margin: 0 auto;
+        padding: 0 25px;
+    }
+
+    .welcome-box {
+        display: flex;
+        align-items: center;
+
+    }
+
+    .welcome-box h1 {
+        padding: 220px 80px 0px;
+        font-size: 18px !important;
+        line-height: 20px;
+    }
+
+    .second-half p {
+        padding-top: 60px;
+        font-size: 16px;
+    }
+
+    .second-half p span {
+        font-size: 24px;
+        letter-spacing: 0.1em;
+    }
+
+    .second-half p {
+        width: 100%;
+    }
+
+    .second-half a {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10px;
+        display: flex;
+        font-size: 12px;
+        line-height: 14px;
+    }
+
+    .points-content:first h2.subheading.text-center {
+        font-size: 17px;
+        line-height: 19px;
+    }
+
+    .points-content p {
+        font-weight: 300;
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+
+    .prices-cards.pb-3.d-flex.mt-4.justify-content-between {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .prices-card.flex-item-center {
+        margin: 15px auto;
+        width: 100% !important;
+    }
+
+    .prices-card .price {
+
+        font-weight: 300;
+        font-size: 60px;
+
+    }
+
+    .prices-card.flex-item-center p {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+    .prices-card.flex-item-center a.btn.btn-primary {
+        font-size: 12px;
+    }
+
+
+    .prices-card.flex-item-center a.btn.btn-secondary {
+        font-size: 12px;
+    }
+
+    .points-content .pp {
+        font-size: 17px;
+        line-height: 19px;
+        padding: 0 40px;
+        font-style: normal;
+        font-weight: normal;
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+
+    .pp-cards.d-flex.mt-2.justify-content-between {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .pp-card.flex-item-center {
+
+        margin: 15px auto;
+        width: 100% !important;
+    }
+
+    .pp-cards:first .pp-card.flex-item-center {
+        margin: 50px auto !important;
+
+    }
+
+    .pp-card.flex-item-center.pp-fan {
+        margin-bottom: 70px;
+    }
+
+
+}
