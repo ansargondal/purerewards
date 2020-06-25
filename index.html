@@ -24,7 +24,6 @@
         }
 
         .col-right {
-            background: red;
             width: 35.4%;
         }
 
@@ -58,12 +57,18 @@
             z-index: 8888;
         }
 
-        .l-thumbnails .content h2 {
+        .l-thumbnails .content h2,
+        .skin-care-thumbnail .content h2,
+        .r-thumbnail .content h2,
+        .review-thumbnail .content h2{
             font-size: 1.3rem;
             letter-spacing: 0.1em !important;
         }
 
-        .l-thumbnails .content p {
+        .l-thumbnails .content p,
+        .r-thumbnail .content p,
+        .skin-care-thumbnail .content p,
+        .review-thumbnail .content p{
             font-size: .9rem;
             letter-spacing: .01em !important;
         }
@@ -79,18 +84,76 @@
             height: 534px;
             overflow: hidden;
             background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("images/LL-referral@2x.jpg");
-            background-position: top center;
+            background-repeat: no-repeat;
+            background-position: 80% 89%;
             background-origin: border-box;
             background-size: cover;
-            background-repeat: no-repeat;
+            position: relative;
         }
 
         .r-thumbnail img {
-            width: 110%;
+            width: 190%;
+        }
+
+        .r-thumbnail .content {
+            width: 280px;
+            height: 80px;
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            margin-left: 20px;
+            margin-top: -40px;
+            color: #fff;
+            z-index: 8888;
+        }
+
+        .skin-care-thumbnail {
+            width: 660px;
+            height: 250px;
+        }
+
+        .skin-care-thumbnail img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .skin-care-thumbnail .content {
+            width: 660px;
+            height: 50px;
+            top: 53%;
+            left: 40%;
+            transform: translateX(-330px);
+            position: absolute;
+            color: #fff;
+            z-index: 8888;
+        }
+
+
+        .review-thumbnail {
+            width: 325px !important;
+            height: 250px;
+            position: relative;
+        }
+
+        .review-thumbnail .content {
+            width: 290px;
+            height: 50px;
+            top: 50%;
+            left: 50%;
+            margin-top: -30px;
+            margin-left: -135px;
+            position: absolute;
+            color: #fff;
+            z-index: 8888;
+        }
+
+        .review-thumbnail img {
+            width: 100%;
+            height: 100%;
         }
 
         .tracker-links {
-            width: 55%;
+            width: 45%;
             padding-top: 35px;
             padding-bottom: 76px;
             margin: 0 auto;
@@ -98,6 +161,7 @@
 
         .tracker-links a {
             text-decoration: underline;
+            font-size: .8rem;
             color: #000;
         }
 
@@ -123,7 +187,7 @@
 <section class="grid-section">
     <div class="c-container">
         <h2 class="subheading text-center pt-1 pb-2">EARN PURE POINTS</h2>
-        <div class="gallery ">
+        <div class="gallery">
             <div class="col-left w-75">
                 <a href="#" class="img-link">
                     <div class="l-thumbnails">
@@ -164,9 +228,39 @@
                 </a>
             </div>
             <div class="col-right w-24">
-                <div class="r-thumbnail">
-                    <img src="images/LL-referral@2x.jpg">
-                </div>
+
+                <a href="#" class="img-link">
+                    <div class="r-thumbnail">
+                        <div class="content">
+                            <h2>REFER A FRIEND</h2>
+                            <p class="mt-0">200 PURE POINTS</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="gallery-2" style="display: flex; justify-content: space-between">
+            <div class="col-left  mt-2" style=" width: 63%">
+                <a href="#" class="img-link">
+                    <div class="skin-care-thumbnail">
+                        <img src="images/LL_quiz@2x.jpg" alt="">
+                        <div class="content">
+                            <h2 class="text-center">TAKE OUR SKINCARE REGIMEN QUIZ</h2>
+                            <p class="mt-0 text-center">200 PURE POINTS</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-right" style=" width: 31.5%">
+                <a href="#" class="img-link">
+                    <div class=" mt-2 review-thumbnail">
+                        <img src="images/LL_review@2x.jpg" alt="">
+                        <div class="content ">
+                            <h2 class="text-center">LEAVE REVIEW</h2>
+                            <p class="mt-0 text-center">200 PURE POINTS</p>
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
         <div class="tracker-links">
@@ -206,7 +300,6 @@
         </div>
     </div>
 </section>
-
 <section class="section pp-love-section mb-5">
     <div class="c-container">
         <div class="points-content mx-auto">
@@ -310,7 +403,6 @@
         </div>
     </div>
 </sidebar>
-
 <div class="d-modal" id="modal-box">
     <div class="d-modal-content">
         <a href="#" id="btn-close-modal"><img class="btn-close" src="images/LL_close@2x.png" alt=""></a>
